@@ -16,15 +16,15 @@ Within a JavaScript(let), start with the following:
 
 This will create a Notification object that has a few default values that are needed. To fill the notification with relevant info, do something like this:
 
-  n.fill( {
-    title: "Test Title",
-    text: "Test Text",
-    style: "inbox",
-    inboxlines: ["Line 1", "Line 2", "Line 3"],
-    bigsubtext: "+2 more",
-    icon: icon("alert_dark_frame"),
-    color: color("black")
-  } );
+    n.fill( {
+        title: "Test Title",
+        text: "Test Text",
+        style: "inbox",
+        inboxlines: ["Line 1", "Line 2", "Line 3"],
+        bigsubtext: "+2 more",
+        icon: icon("alert_dark_frame"),
+        color: color("black")
+    } );
 
 What this does is has all the important information in an object. If you find that you use similar properties for multiple notifications, you can use the preset function:
 
