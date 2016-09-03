@@ -97,8 +97,8 @@
 	<Project sr="proj0" ve="2">
 		<cdate>1458182836174</cdate>
 		<name>Misc</name>
-		<pids>69,85,78,98,76,80</pids>
-		<tids>101,75,103,100</tids>
+		<pids>69,98,76,78,80,85</pids>
+		<tids>100,101,75,103</tids>
 		<Img sr="icon" ve="2">
 			<nme>hd_zzz_tasker</nme>
 		</Img>
@@ -189,7 +189,7 @@ n.create();</Str>
 	</Task>
 	<Task sr="task75">
 		<cdate>1466603527420</cdate>
-		<edate>1472863004533</edate>
+		<edate>1472864855923</edate>
 		<id>75</id>
 		<nme>Notify</nme>
 		<pri>100</pri>
@@ -661,7 +661,7 @@ n.create();</Str>
 			<Str sr="arg1" ve="3">builder</Str>
 			<Str sr="arg2" ve="3">setColor
 {android.app.Notification$Builder} (int)</Str>
-			<Str sr="arg3" ve="3">-65536</Str>
+			<Str sr="arg3" ve="3">%color</Str>
 			<Str sr="arg4" ve="3"/>
 			<Str sr="arg5" ve="3"/>
 			<Str sr="arg6" ve="3"/>
