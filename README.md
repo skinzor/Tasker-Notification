@@ -10,7 +10,7 @@ To Install:
 
 To Use:
 
-Within a JavaScript(let), start with the following:
+Within a JavaScript(let), add the Notification.js file as a library, and enter the following line into your code:
 
     var n = new Notification();
 
