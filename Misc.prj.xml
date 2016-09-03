@@ -1,0 +1,1287 @@
+<TaskerData sr="" dvi="1" tv="4.8u5m">
+	<Profile sr="prof69" ve="2">
+		<cdate>1472264314549</cdate>
+		<edate>1472862906371</edate>
+		<id>69</id>
+		<mid0>101</mid0>
+		<nme>Button 1 Intent Receiver</nme>
+		<Event sr="con0" ve="2">
+			<code>599</code>
+			<Str sr="arg0" ve="3">com.notificationbutton1.TASKER</Str>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg2" val="0"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+		</Event>
+	</Profile>
+	<Profile sr="prof76" ve="2">
+		<cdate>1472264314549</cdate>
+		<clp>true</clp>
+		<edate>1472520596007</edate>
+		<id>76</id>
+		<mid0>101</mid0>
+		<nme>Button 2 Intent Receiver</nme>
+		<Event sr="con0" ve="2">
+			<code>599</code>
+			<Str sr="arg0" ve="3">com.notificationbutton2.TASKER</Str>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg2" val="0"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+		</Event>
+	</Profile>
+	<Profile sr="prof78" ve="2">
+		<cdate>1472264314549</cdate>
+		<clp>true</clp>
+		<edate>1472862630892</edate>
+		<id>78</id>
+		<mid0>101</mid0>
+		<nme>Button 3 Intent Receiver</nme>
+		<Event sr="con0" ve="2">
+			<code>599</code>
+			<Str sr="arg0" ve="3">com.notificationbutton3.TASKER</Str>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg2" val="0"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+		</Event>
+	</Profile>
+	<Profile sr="prof80" ve="2">
+		<cdate>1472264314549</cdate>
+		<clp>true</clp>
+		<edate>1472862688047</edate>
+		<id>80</id>
+		<mid0>103</mid0>
+		<nme>Dismiss Intent Receiver</nme>
+		<Event sr="con0" ve="2">
+			<code>599</code>
+			<Str sr="arg0" ve="3">com.notificationcancel.TASKER</Str>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg2" val="0"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+		</Event>
+	</Profile>
+	<Profile sr="prof85" ve="2">
+		<cdate>1472264314549</cdate>
+		<clp>true</clp>
+		<edate>1472523169185</edate>
+		<id>85</id>
+		<mid0>101</mid0>
+		<nme>On Touch Intent Receiver</nme>
+		<Event sr="con0" ve="2">
+			<code>599</code>
+			<Str sr="arg0" ve="3">com.notificationontouch.TASKER</Str>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg2" val="0"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+		</Event>
+	</Profile>
+	<Profile sr="prof98" ve="2">
+		<cdate>1472264314549</cdate>
+		<clp>true</clp>
+		<edate>1472697133964</edate>
+		<id>98</id>
+		<mid0>101</mid0>
+		<nme>On Delete Intent Receiver</nme>
+		<Event sr="con0" ve="2">
+			<code>599</code>
+			<Str sr="arg0" ve="3">com.notificationondelete.TASKER</Str>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg2" val="0"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+		</Event>
+	</Profile>
+	<Project sr="proj0" ve="2">
+		<cdate>1458182836174</cdate>
+		<name>Misc</name>
+		<pids>69,85,78,98,76,80</pids>
+		<tids>101,75,103,100</tids>
+		<Img sr="icon" ve="2">
+			<nme>hd_zzz_tasker</nme>
+		</Img>
+	</Project>
+	<Task sr="task100">
+		<cdate>1472862137350</cdate>
+		<edate>1472862897545</edate>
+		<id>100</id>
+		<nme>Test Notification</nme>
+		<pri>100</pri>
+		<Action sr="act0" ve="7">
+			<code>129</code>
+			<Str sr="arg0" ve="3">var n = new Notification();
+n.fill( {
+style: "bigtext",
+bigtext: "Test big text",
+bigsubtext: "Test big sub text",
+icon: icon("ic_menu_add")
+} );
+n.addbutton("Cancel Notification", "Button", icon("menu_frame"));
+n.create();</Str>
+			<Str sr="arg1" ve="3">/storage/emulated/0/Tasker/JavaScript Files/Notification.js</Str>
+			<Int sr="arg2" val="1"/>
+			<Int sr="arg3" val="45"/>
+		</Action>
+	</Task>
+	<Task sr="task101">
+		<cdate>1472862549941</cdate>
+		<edate>1472862906371</edate>
+		<id>101</id>
+		<nme>Intent Received</nme>
+		<rty>2</rty>
+		<Action sr="act0" ve="7">
+			<code>548</code>
+			<Str sr="arg0" ve="3">Running task %task_name</Str>
+			<Int sr="arg1" val="0"/>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">%task_name</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Str sr="arg2" ve="3"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Int sr="arg5" val="0"/>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%task_name</Str>
+			<Int sr="arg1" val="0"/>
+		</Action>
+	</Task>
+	<Task sr="task103">
+		<cdate>1472862673738</cdate>
+		<edate>1472862696207</edate>
+		<id>103</id>
+		<nme>Cancel Notification</nme>
+		<Action sr="act0" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">nm</Str>
+			<Str sr="arg1" ve="3">NotificationManager</Str>
+			<Str sr="arg2" ve="3">from
+{NotificationManager} (Context)</Str>
+			<Str sr="arg3" ve="3">CONTEXT</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">nm</Str>
+			<Str sr="arg2" ve="3">cancel
+{} (int)</Str>
+			<Str sr="arg3" ve="3">%idn</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+	</Task>
+	<Task sr="task75">
+		<cdate>1466603527420</cdate>
+		<edate>1472863004533</edate>
+		<id>75</id>
+		<nme>Notify</nme>
+		<pri>100</pri>
+		<rty>2</rty>
+		<Action sr="act0" ve="7">
+			<code>548</code>
+			<Str sr="arg0" ve="3">Notifying...</Str>
+			<Int sr="arg1" val="0"/>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>131</code>
+			<Str sr="arg0" ve="3">Tasker/Javascript Files/NotificationDeconstruct.js</Str>
+			<Str sr="arg1" ve="3"/>
+			<Int sr="arg2" val="1"/>
+			<Int sr="arg3" val="45"/>
+		</Action>
+		<Action sr="act10" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">ibs</Str>
+			<Str sr="arg1" ve="3">InboxStyle</Str>
+			<Str sr="arg2" ve="3">new
+{InboxStyle} (android.app.Notification$Builder)</Str>
+			<Str sr="arg3" ve="3">builder</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act11" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">ibs</Str>
+			<Str sr="arg2" ve="3">setBigContentTitle
+{InboxStyle} (CharSequence)</Str>
+			<Str sr="arg3" ve="3">"%bigtitle"</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act12" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">ibs</Str>
+			<Str sr="arg2" ve="3">setSummaryText
+{InboxStyle} (CharSequence)</Str>
+			<Str sr="arg3" ve="3">"%bigsubtext"</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act13" ve="7">
+			<code>39</code>
+			<label>Adds up to 5 lines to display in the notification</label>
+			<Str sr="arg0" ve="3">%num</Str>
+			<Str sr="arg1" ve="3">1:%numinbox</Str>
+		</Action>
+		<Action sr="act14" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">ibs</Str>
+			<Str sr="arg2" ve="3">addLine
+{InboxStyle} (CharSequence)</Str>
+			<Str sr="arg3" ve="3">"%inboxline(%num)"</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act15" ve="7">
+			<code>40</code>
+		</Action>
+		<Action sr="act16" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">builder</Str>
+			<Str sr="arg2" ve="3">setStyle
+{android.app.Notification$Builder} (android.app.Notification$Style)</Str>
+			<Str sr="arg3" ve="3">ibs</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act17" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act18" ve="7">
+			<code>37</code>
+			<label>Sets Custom Icon - not fully working</label>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%iconpicker</lhs>
+					<op>2</op>
+					<rhs>custom</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act19" ve="7">
+			<code>664</code>
+			<label>Creates a paint object (1 = Anti Aliasing)</label>
+			<Str sr="arg0" ve="3">paint</Str>
+			<Str sr="arg1" ve="3">Paint</Str>
+			<Str sr="arg2" ve="3">new
+{Paint} (int)</Str>
+			<Str sr="arg3" ve="3">1</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>664</code>
+			<label>Start building Notification</label>
+			<Str sr="arg0" ve="3">builder</Str>
+			<Str sr="arg1" ve="3">android.app.Notification$Builder</Str>
+			<Str sr="arg2" ve="3">new
+{android.app.Notification$Builder} (Context)</Str>
+			<Str sr="arg3" ve="3">CONTEXT</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act20" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">paint</Str>
+			<Str sr="arg2" ve="3">setTextSize
+{} (float)</Str>
+			<Str sr="arg3" ve="3">100</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act21" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">paint</Str>
+			<Str sr="arg2" ve="3">setColor
+{} (int)</Str>
+			<Str sr="arg3" ve="3">-1</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act22" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">align</Str>
+			<Str sr="arg1" ve="3">Align</Str>
+			<Str sr="arg2" ve="3">valueOf
+{Align} (String)</Str>
+			<Str sr="arg3" ve="3">LEFT</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act23" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">paint</Str>
+			<Str sr="arg2" ve="3">setTextAlign
+{} (Align)</Str>
+			<Str sr="arg3" ve="3">align</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act24" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">%ascent</Str>
+			<Str sr="arg1" ve="3">paint</Str>
+			<Str sr="arg2" ve="3">ascent
+{float} ()</Str>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act25" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%ascent</Str>
+			<Str sr="arg1" ve="3">%ascent * -1</Str>
+			<Int sr="arg2" val="1"/>
+			<Int sr="arg3" val="0"/>
+		</Action>
+		<Action sr="act26" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">%descent</Str>
+			<Str sr="arg1" ve="3">paint</Str>
+			<Str sr="arg2" ve="3">descent
+{float} ()</Str>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act27" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">%width</Str>
+			<Str sr="arg1" ve="3">paint</Str>
+			<Str sr="arg2" ve="3">measureText
+{float} (String)</Str>
+			<Str sr="arg3" ve="3">%icon</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act28" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%width</Str>
+			<Str sr="arg1" ve="3">round(%width + .5)</Str>
+			<Int sr="arg2" val="1"/>
+			<Int sr="arg3" val="0"/>
+		</Action>
+		<Action sr="act29" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%height</Str>
+			<Str sr="arg1" ve="3">round(%ascent + %descent + .5)</Str>
+			<Int sr="arg2" val="1"/>
+			<Int sr="arg3" val="0"/>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>37</code>
+			<label>Expandable Notification</label>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%style</lhs>
+					<op>2</op>
+					<rhs>bigtext</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act30" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">config</Str>
+			<Str sr="arg1" ve="3">android.graphics.Bitmap$Config</Str>
+			<Str sr="arg2" ve="3">valueOf
+{android.graphics.Bitmap$Config} (String)</Str>
+			<Str sr="arg3" ve="3">ARGB_8888</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act31" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">bitmap</Str>
+			<Str sr="arg1" ve="3">Bitmap</Str>
+			<Str sr="arg2" ve="3">createBitmap
+{Bitmap} (int, int, android.graphics.Bitmap$Config)</Str>
+			<Str sr="arg3" ve="3">%width</Str>
+			<Str sr="arg4" ve="3">%height</Str>
+			<Str sr="arg5" ve="3">config</Str>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act32" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">canvas</Str>
+			<Str sr="arg1" ve="3">Canvas</Str>
+			<Str sr="arg2" ve="3">new
+{Canvas} (Bitmap)</Str>
+			<Str sr="arg3" ve="3">bitmap</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act33" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">canvas</Str>
+			<Str sr="arg2" ve="3">drawText
+{} (String, float, float, Paint)</Str>
+			<Str sr="arg3" ve="3">%icon</Str>
+			<Str sr="arg4" ve="3">0</Str>
+			<Str sr="arg5" ve="3">%ascent</Str>
+			<Str sr="arg6" ve="3">paint</Str>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act34" ve="7">
+			<code>664</code>
+			<label>Can't be used since the Icon object is not defined in Tasker's list of Java Functions</label>
+			<on>false</on>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">builder</Str>
+			<Str sr="arg2" ve="3">setSmallIcon
+{android.app.Notification$Builder} (android.graphics.drawable.Icon)</Str>
+			<Str sr="arg3" ve="3">icon</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act35" ve="7">
+			<code>664</code>
+			<label>Sets icon in</label>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">builder</Str>
+			<Str sr="arg2" ve="3">setSmallIcon
+{android.app.Notification$Builder} (int)</Str>
+			<Str sr="arg3" ve="3">17301504</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act36" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">builder</Str>
+			<Str sr="arg2" ve="3">setLargeIcon
+{android.app.Notification$Builder} (Bitmap)</Str>
+			<Str sr="arg3" ve="3">bitmap</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act37" ve="7">
+			<code>43</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%iconpicker</lhs>
+					<op>2</op>
+					<rhs>small</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act38" ve="7">
+			<code>664</code>
+			<label>Sets small icon using an integer value indexing built in icons</label>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">builder</Str>
+			<Str sr="arg2" ve="3">setSmallIcon
+{android.app.Notification$Builder} (int)</Str>
+			<Str sr="arg3" ve="3">%icon</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act39" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act4" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">bts</Str>
+			<Str sr="arg1" ve="3">BigTextStyle</Str>
+			<Str sr="arg2" ve="3">new
+{BigTextStyle} (android.app.Notification$Builder)</Str>
+			<Str sr="arg3" ve="3">builder</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act40" ve="7">
+			<code>664</code>
+			<label>Sets title</label>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">builder</Str>
+			<Str sr="arg2" ve="3">setContentTitle
+{android.app.Notification$Builder} (CharSequence)</Str>
+			<Str sr="arg3" ve="3">"%title"</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act41" ve="7">
+			<code>664</code>
+			<label>Sets text (non expandable)</label>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">builder</Str>
+			<Str sr="arg2" ve="3">setContentText
+{android.app.Notification$Builder} (CharSequence)</Str>
+			<Str sr="arg3" ve="3">"%text"</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act42" ve="7">
+			<code>664</code>
+			<label>Sets subtext</label>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">builder</Str>
+			<Str sr="arg2" ve="3">setSubText
+{android.app.Notification$Builder} (CharSequence)</Str>
+			<Str sr="arg3" ve="3">"%subtext"</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%subtext</lhs>
+					<op>12</op>
+					<rhs></rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act43" ve="7">
+			<code>664</code>
+			<label>Sets icon background color</label>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">builder</Str>
+			<Str sr="arg2" ve="3">setColor
+{android.app.Notification$Builder} (int)</Str>
+			<Str sr="arg3" ve="3">-65536</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%color</lhs>
+					<op>12</op>
+					<rhs></rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act44" ve="7">
+			<code>664</code>
+			<label>Sets priority (defaulted to 0)</label>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">builder</Str>
+			<Str sr="arg2" ve="3">setPriority
+{android.app.Notification$Builder} (int)</Str>
+			<Str sr="arg3" ve="3">%priority</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act45" ve="7">
+			<code>664</code>
+			<label>Sets persistency (defaulted as false)</label>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">builder</Str>
+			<Str sr="arg2" ve="3">setOngoing
+{android.app.Notification$Builder} (boolean)</Str>
+			<Str sr="arg3" ve="3">%persistent</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act46" ve="7">
+			<code>664</code>
+			<label>Sets LED</label>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">builder</Str>
+			<Str sr="arg2" ve="3">setLights
+{android.app.Notification$Builder} (int, int, int)</Str>
+			<Str sr="arg3" ve="3">%ledargb</Str>
+			<Str sr="arg4" ve="3">%ledon</Str>
+			<Str sr="arg5" ve="3">%ledoff</Str>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+			<ConditionList sr="if">
+				<bool0>And</bool0>
+				<bool1>And</bool1>
+				<Condition sr="c0" ve="3">
+					<lhs>%ledargb</lhs>
+					<op>12</op>
+					<rhs></rhs>
+				</Condition>
+				<Condition sr="c1" ve="3">
+					<lhs>%ledon</lhs>
+					<op>12</op>
+					<rhs></rhs>
+				</Condition>
+				<Condition sr="c2" ve="3">
+					<lhs>%ledoff</lhs>
+					<op>12</op>
+					<rhs></rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act47" ve="7">
+			<code>664</code>
+			<label>Sets ticker - only used by accessibility services (not displayed anywhere)</label>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">builder</Str>
+			<Str sr="arg2" ve="3">setTicker
+{android.app.Notification$Builder} (CharSequence)</Str>
+			<Str sr="arg3" ve="3">"%ticker"</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%ticker</lhs>
+					<op>12</op>
+					<rhs></rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act48" ve="7">
+			<code>664</code>
+			<label>Sets category</label>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">builder</Str>
+			<Str sr="arg2" ve="3">setCategory
+{android.app.Notification$Builder} (String)</Str>
+			<Str sr="arg3" ve="3">%category</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%category</lhs>
+					<op>12</op>
+					<rhs></rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act49" ve="7">
+			<code>664</code>
+			<label>Sets defaults (light, sound, vibrate) - Notification will be a heads up notification if sound or vibrate are defaulted</label>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">builder</Str>
+			<Str sr="arg2" ve="3">setDefaults
+{android.app.Notification$Builder} (int)</Str>
+			<Str sr="arg3" ve="3">%defaults</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%defaults</lhs>
+					<op>12</op>
+					<rhs></rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act5" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">bts</Str>
+			<Str sr="arg2" ve="3">setBigContentTitle
+{BigTextStyle} (CharSequence)</Str>
+			<Str sr="arg3" ve="3">"%bigtitle"</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act50" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">builder</Str>
+			<Str sr="arg2" ve="3">setOnlyAlertOnce
+{android.app.Notification$Builder} (boolean)</Str>
+			<Str sr="arg3" ve="3">%alertonce</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%alertonce</lhs>
+					<op>12</op>
+					<rhs></rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act51" ve="7">
+			<code>37</code>
+			<label>Sets Dismiss on Touch (has priority over on-touch action)</label>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%dismissontouch</lhs>
+					<op>2</op>
+					<rhs>true</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act52" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">in</Str>
+			<Str sr="arg1" ve="3">Intent</Str>
+			<Str sr="arg2" ve="3">new
+{Intent} (String)</Str>
+			<Str sr="arg3" ve="3">com.notificationcancel.TASKER</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act53" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">in</Str>
+			<Str sr="arg2" ve="3">putExtra
+{Intent} (String, String)</Str>
+			<Str sr="arg3" ve="3">idn</Str>
+			<Str sr="arg4" ve="3">%idn</Str>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act54" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">pi</Str>
+			<Str sr="arg1" ve="3">PendingIntent</Str>
+			<Str sr="arg2" ve="3">getBroadcast
+{PendingIntent} (Context, int, Intent, int)</Str>
+			<Str sr="arg3" ve="3">CONTEXT</Str>
+			<Str sr="arg4" ve="3">0</Str>
+			<Str sr="arg5" ve="3">in</Str>
+			<Str sr="arg6" ve="3">0</Str>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act55" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">builder</Str>
+			<Str sr="arg2" ve="3">setContentIntent
+{android.app.Notification$Builder} (PendingIntent)</Str>
+			<Str sr="arg3" ve="3">pi</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act56" ve="7">
+			<code>43</code>
+			<label>Sets On Touch action</label>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%ontouch</lhs>
+					<op>12</op>
+					<rhs></rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act57" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">in</Str>
+			<Str sr="arg1" ve="3">Intent</Str>
+			<Str sr="arg2" ve="3">new
+{Intent} (String)</Str>
+			<Str sr="arg3" ve="3">com.notificationontouch.TASKER</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act58" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">in</Str>
+			<Str sr="arg2" ve="3">putExtra
+{Intent} (String, String)</Str>
+			<Str sr="arg3" ve="3">task_name</Str>
+			<Str sr="arg4" ve="3">%ontouch</Str>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act59" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">pi</Str>
+			<Str sr="arg1" ve="3">PendingIntent</Str>
+			<Str sr="arg2" ve="3">getBroadcast
+{PendingIntent} (Context, int, Intent, int)</Str>
+			<Str sr="arg3" ve="3">CONTEXT</Str>
+			<Str sr="arg4" ve="3">0</Str>
+			<Str sr="arg5" ve="3">in</Str>
+			<Str sr="arg6" ve="3">0</Str>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act6" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">bts</Str>
+			<Str sr="arg2" ve="3">bigText
+{BigTextStyle} (CharSequence)</Str>
+			<Str sr="arg3" ve="3">"%bigtext"</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act60" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">builder</Str>
+			<Str sr="arg2" ve="3">setContentIntent
+{android.app.Notification$Builder} (PendingIntent)</Str>
+			<Str sr="arg3" ve="3">pi</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act61" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act62" ve="7">
+			<code>37</code>
+			<label>Sets on delete action</label>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%ondelete</lhs>
+					<op>12</op>
+					<rhs></rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act63" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">in</Str>
+			<Str sr="arg1" ve="3">Intent</Str>
+			<Str sr="arg2" ve="3">new
+{Intent} (String)</Str>
+			<Str sr="arg3" ve="3">com.notificationondelete.TASKER</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act64" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">in</Str>
+			<Str sr="arg2" ve="3">putExtra
+{Intent} (String, String)</Str>
+			<Str sr="arg3" ve="3">task_name</Str>
+			<Str sr="arg4" ve="3">%ondelete</Str>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act65" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">pi</Str>
+			<Str sr="arg1" ve="3">PendingIntent</Str>
+			<Str sr="arg2" ve="3">getBroadcast
+{PendingIntent} (Context, int, Intent, int)</Str>
+			<Str sr="arg3" ve="3">CONTEXT</Str>
+			<Str sr="arg4" ve="3">0</Str>
+			<Str sr="arg5" ve="3">in</Str>
+			<Str sr="arg6" ve="3">0</Str>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act66" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">builder</Str>
+			<Str sr="arg2" ve="3">setContentIntent
+{android.app.Notification$Builder} (PendingIntent)</Str>
+			<Str sr="arg3" ve="3">pi</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act67" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act68" ve="7">
+			<code>37</code>
+			<label>Sets buttons</label>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%numbuttons</lhs>
+					<op>12</op>
+					<rhs></rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act69" ve="7">
+			<code>39</code>
+			<Str sr="arg0" ve="3">%num</Str>
+			<Str sr="arg1" ve="3">1:%numbuttons</Str>
+		</Action>
+		<Action sr="act7" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">bts</Str>
+			<Str sr="arg2" ve="3">setSummaryText
+{BigTextStyle} (CharSequence)</Str>
+			<Str sr="arg3" ve="3">"%bigsubtext"</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%bigsubtext</lhs>
+					<op>12</op>
+					<rhs></rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act70" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">in</Str>
+			<Str sr="arg1" ve="3">Intent</Str>
+			<Str sr="arg2" ve="3">new
+{Intent} (String)</Str>
+			<Str sr="arg3" ve="3">com.notificationbutton%num.TASKER</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act71" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">in</Str>
+			<Str sr="arg2" ve="3">putExtra
+{Intent} (String, String)</Str>
+			<Str sr="arg3" ve="3">task_name</Str>
+			<Str sr="arg4" ve="3">%buttontask(%num)</Str>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act72" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">pi</Str>
+			<Str sr="arg1" ve="3">PendingIntent</Str>
+			<Str sr="arg2" ve="3">getBroadcast
+{PendingIntent} (Context, int, Intent, int)</Str>
+			<Str sr="arg3" ve="3">CONTEXT</Str>
+			<Str sr="arg4" ve="3">0</Str>
+			<Str sr="arg5" ve="3">in</Str>
+			<Str sr="arg6" ve="3">0</Str>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act73" ve="7">
+			<code>664</code>
+			<label>Alternate way of building the action (Either works)</label>
+			<on>false</on>
+			<Str sr="arg0" ve="3">act</Str>
+			<Str sr="arg1" ve="3">Action</Str>
+			<Str sr="arg2" ve="3">new
+{Action} (int, CharSequence, PendingIntent)</Str>
+			<Str sr="arg3" ve="3">%buttonicon(%num)</Str>
+			<Str sr="arg4" ve="3">"%buttonlabel(%num)"</Str>
+			<Str sr="arg5" ve="3">pi</Str>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act74" ve="7">
+			<code>664</code>
+			<on>false</on>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">builder</Str>
+			<Str sr="arg2" ve="3">addAction
+{android.app.Notification$Builder} (Action)</Str>
+			<Str sr="arg3" ve="3">act</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act75" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">builder</Str>
+			<Str sr="arg2" ve="3">addAction
+{android.app.Notification$Builder} (int, CharSequence, PendingIntent)</Str>
+			<Str sr="arg3" ve="3">%buttonicon(%num)</Str>
+			<Str sr="arg4" ve="3">"%buttonlabel(%num)"</Str>
+			<Str sr="arg5" ve="3">pi</Str>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act76" ve="7">
+			<code>40</code>
+		</Action>
+		<Action sr="act77" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act78" ve="7">
+			<code>300</code>
+			<label>Builds and creates Notification with identification number %idn (defaulted to 1)</label>
+		</Action>
+		<Action sr="act79" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">notification</Str>
+			<Str sr="arg1" ve="3">builder</Str>
+			<Str sr="arg2" ve="3">build
+{Notification} ()</Str>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act8" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">builder</Str>
+			<Str sr="arg2" ve="3">setStyle
+{android.app.Notification$Builder} (android.app.Notification$Style)</Str>
+			<Str sr="arg3" ve="3">bts</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act80" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">notification_service</Str>
+			<Str sr="arg1" ve="3">CONTEXT</Str>
+			<Str sr="arg2" ve="3">getSystemService
+{Object} (String)</Str>
+			<Str sr="arg3" ve="3">"notification"</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act81" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">notification_service</Str>
+			<Str sr="arg2" ve="3">notify
+{} (int, Notification)</Str>
+			<Str sr="arg3" ve="3">%idn</Str>
+			<Str sr="arg4" ve="3">notification</Str>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act82" ve="7">
+			<code>62</code>
+			<label>Sets vibrate pattern</label>
+			<Str sr="arg0" ve="3">%vibrate</Str>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%vibrate</lhs>
+					<op>12</op>
+					<rhs></rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act83" ve="7">
+			<code>300</code>
+			<label>End</label>
+		</Action>
+		<Action sr="act9" ve="7">
+			<code>43</code>
+			<label>Inbox style notification</label>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%style</lhs>
+					<op>2</op>
+					<rhs>inbox</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Img sr="icn" ve="2">
+			<cls>net.dinglisch.android.taskerm.Tasker</cls>
+			<pkg>net.dinglisch.android.taskerm</pkg>
+		</Img>
+	</Task>
+</TaskerData>
